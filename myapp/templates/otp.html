@@ -1,0 +1,39 @@
+{% extends 'header_footer.html' %}
+{% block content  %}
+{% load static %}
+
+<div class="section blue_bg">
+    <div class="container-fluid">
+       <div class="row">
+          <!-- contact -->
+          <div class="col-md-6 offset-md-3">
+             <div class="contact">
+                <div class="row ">
+                   <div class="col-md-12">
+                      <div class="titlepage text_align_center">
+                         <h2>OTP Verification</h2>
+                      </div>
+                   </div>
+                   <div class="col-md-12">
+                      <form id="request" class="main_form" action="{% url 'otp'%}" method="post">
+                           <p style:"color:white;">{{ msg }}</p>
+                       {% csrf_token %}
+                         <div class="row">
+                           <div class="col-md-12">
+                               <input class="contactus" placeholder="Please write your OTP" type="text" name="otp">
+                            </div>
+
+                            <div class="col-md-12">
+                               <button class="send_btn" type="Submit">Submit</button>
+                               <br>
+                               <br>
+
+                            </div>
+                          </div>
+                       </form>
+                    </div>
+                </div>
+              </div>
+           </div>
+ 
+{% endblock %}     

@@ -1,0 +1,63 @@
+{% extends 'header_footer.html' %}
+{% block content  %}
+{% load static %}
+      <!-- end header inner -->
+      <!-- section blue_bg -->
+      <div class="section blue_bg">
+         <div class="container-fluid">
+            <div class="row">
+               <!-- contact -->
+               <div class="col-md-6 offset-md-3">
+                  <div class="contact">
+                     <div class="row ">
+                        <div class="col-md-12">
+                           <div class="titlepage text_align_center">
+                              <h2>USER INFORMATION</h2>
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <form class="main_form" action="{% url 'profile'%}" method="post" enctype="multipart/form-data">
+                             <p style:"color:white;">{{ msg }}</p>    
+                            {% csrf_token %}
+                            <p>
+                                <img src="{{session_data.propic.url}}" height="280px" width="400px" alt="">
+
+                                <input type="file" name="img" value="{{session_data.propic}}">
+
+                             </p>
+                             <br>
+                             
+                              <div class="row">
+                                 <div class="col-md-12 ">
+                                    <input class="contactus" placeholder="Your name" type="type" name="name" value="{{session_data.name}}"> 
+                                 </div>
+                                 <div class="col-md-12">
+                                    <input class="contactus" placeholder="Phone Number" type="type" name="mob" value="{{session_data.mob}}">                          
+                                 </div>
+                                 <div class="col-md-12">
+                                    <input class="contactus" placeholder="Email" type="type" name="email" value="{{session_data.email}}" disabled>                          
+                                 </div>
+                                 <div class="col-md-12">
+                                    <input class="contactus" placeholder="old password" type="password" name="opwd" >
+                                 </div>
+                                 <div class="col-md-12">
+                                    <input class="contactus" placeholder="new password" type="password" name="npwd" >
+                                 </div>
+                                 <div class="col-md-12">
+                                    <input class="contactus" placeholder="confirm new password" type="password" name="cnpwd" >
+                                 </div>
+
+                                 <div class="col-md-12">
+                                    <button class="send_btn" type="Submit">Update Profile</button>
+                                    <br>
+                                    <br>
+
+                                 </div>
+                               </div>
+                            </form>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+      
+{% endblock%}

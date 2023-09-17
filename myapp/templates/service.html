@@ -1,0 +1,64 @@
+{% extends 'header_footer.html' %}
+{% block content  %}
+{% load static %}
+      <!-- service -->
+      <div class="service">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     
+                     <h2>Coffee Services</h2>
+                     <p> we are passionate about serving you the perfect cup of coffee. Step into our warm and inviting atmosphere, where the aroma of freshly brewed coffee fills the air, and experience the artistry and craftsmanship that goes into each cup.                   </p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <form  action="{% url 'service' %}" method="post">
+                     {%csrf_token%}
+                  <!--  Demos -->
+                  <div class="owl-carousel owl-theme">
+                     <div class="item">
+                        <div class="service_box text_align_center">
+                           <div class="ser_img">
+                              <figure><img src="{% static 'images/ser_img1.png' %}" alt="#"/></figure>
+                           </div>
+                           <h3>Red Coffee</h3>
+                           <p>Experience the bold fusion of premium coffee and subtle red fruit flavors. A vibrant twist to your daily cup.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="service_box text_align_center">
+                           <div class="ser_img">
+                              <figure><img src="{% static 'images/ser_img3.png' %}" alt="#"/></figure>
+                           </div>
+                           <h3>Black Coffee</h3>
+                           <p>Pure and robust, our Black Coffee lets the natural flavors of carefully selected beans take center stage. A classic and invigorating choice.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="service_box text_align_center">
+                           <div class="ser_img">
+                              <figure><img src="{% static 'images/ser_img2.png' %}" alt="#"/></figure>
+                           </div>
+                           <h3>Chocolate Coffee</h3>
+                           <p>Indulge in the heavenly combination of rich coffee and smooth chocolate. A luscious treat that brings together two beloved flavors.
+                           </p>
+                        </div>
+                     </div>
+                 
+                  </div>
+               </div>
+               <div class="col-md-12">
+                  <a class="read_more" href="{% url 'booktable' %}" >Book Now Table</a>
+               </div>
+            </form>
+            </div>
+         </div>
+      </div>
+      <!-- end service -->
+      <!--  footer -->
+{% endblock%}     

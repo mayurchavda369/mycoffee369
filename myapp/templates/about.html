@@ -1,0 +1,32 @@
+{% extends 'header_footer.html' %}
+{% block content  %}
+{% load static %}
+      <!-- about -->
+      <div class="about">
+         <div class="container">
+            <div class="row d_flex grid">
+               <div class="col-md-6">
+                  <div class="about_img text_align_center">
+                     <figure><img src="{% static "images/about.png" %}" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-6 order1">
+                  <div class="titlepage text_align_left">
+                     <h2>About Mayur's 369 Coffee</h2>
+                     <p>Why Choose Us?
+                        ✨ Premium Coffee Beans: We source the finest coffee beans from around the world, ensuring every cup is a masterpiece.
+                        
+                        ✨ Expert Baristas: Our talented baristas craft coffee with precision and passion, creating a work of art in every cup.
+                        
+                        ✨ Unique Blends: Explore our exclusive coffee blends that cater to a variety of palates – from bold and robust to smooth and aromatic.
+                        
+                        ✨ Cozy Ambiance: Immerse yourself in the warm and inviting atmosphere of our cafe. It's the perfect spot to relax, work, or catch up with friends.
+                     </p>
+                     <a class="read_more" href="about.html">Read More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end about -->
+      {%endblock%}    
